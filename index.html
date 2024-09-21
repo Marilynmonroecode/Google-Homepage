@@ -3,78 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Search Replica</title>
+    <title>Google Search</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            background-color: #f2f2f2;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         .logo {
-            margin-bottom: 20px;
-        }
-
-        .logo img {
-            width: 272px; /* Adjust logo size */
+            margin-bottom: 24px;
         }
 
         .search-container {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 24px;
+            border: 1px solid #dfe1e5;
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            outline: none;
             margin-bottom: 20px;
         }
 
-        .search-box {
-            width: 580px;
-            height: 44px;
-            padding: 10px;
-            border: 1px solid #dfe1e5;
-            border-radius: 24px;
-            outline: none;
-            font-size: 16px;
-        }
-
         .buttons {
-            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
         }
 
-        .buttons input {
+        .buttons button {
             padding: 10px 20px;
-            margin: 5px;
-            border: 1px solid #dfe1e5;
-            background-color: #f8f9fa;
+            border: none;
             border-radius: 4px;
-            cursor: pointer;
+            background-color: #f8f9fa;
+            color: #5f6368;
             font-size: 14px;
+            cursor: pointer;
         }
 
-        .buttons input:hover {
-            background-color: #e8e8e8;
+        .buttons button:hover {
+            background-color: #f1f3f4;
+        }
+
+        .buttons button:active {
+            background-color: #e8eaed;
         }
     </style>
 </head>
 <body>
+
     <div class="logo">
-        <!-- Google logo placeholder; replace the src URL with an actual logo URL -->
-        <img src="https://via.placeholder.com/272x92.png?text=Google+Logo" alt="Google Logo">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" width="272" height="92">
     </div>
 
     <div class="search-container">
-        <form action="https://www.google.com/search" method="get">
-            <input type="text" class="search-box" name="q" placeholder="Search Google or type a URL">
-        </form>
+        <input type="text" class="search-bar" placeholder="Search Google or type a URL">
+        <div class="buttons">
+            <button>Google Search</button>
+            <button>I’m Feeling Lucky</button>
+        </div>
     </div>
 
-    <div class="buttons">
-        <input type="submit" value="Google Search">
-        <input type="button" value="I'm Feeling Lucky">
-    </div>
 </body>
 </html>
+>
 
